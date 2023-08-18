@@ -1,0 +1,197 @@
+/* === Variables === */
+:root {
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+}
+@font-face {
+  font-family: "DM Sans", sans-serif;
+  src: url(./DM_Sans/DMSans-VariableFont_opsz\wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  background-color: var(--Cream);
+}
+
+.main-container {
+  /* border: 1px dotted black; */
+  width: 344px;
+  margin: 68px auto;
+  @media (min-width: 600px) {
+    width: 540px;
+  }
+}
+
+.balance{
+  background-color: var(--Soft-red);
+  height: 100px;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--Very-pale-orange);
+  margin-bottom: 16px;
+  @media (min-width: 600px) {
+    height: 126px;
+  }
+  & .balance__title {
+    font-size: 0.7em;
+    margin-bottom: 6px;
+    @media (min-width: 600px){
+      font-size: 1em;
+    }
+  }
+  & .balance__total{
+    font-weight: 700;
+    font-size: 1.4em;
+    @media (min-width: 600px){
+      font-size: 1.8em;
+    }
+  }
+  & .balance__logo {
+    width: 60px;
+    @media (min-width: 600px){
+      width: 75px;
+    }
+  }
+}
+
+.chart {
+  background-color: var(--Very-pale-orange);
+  color: var(--Medium-brown);
+  border-radius: 16px;
+  height: 424px;
+  padding: 28px 20px;
+  @media (min-width: 600px) {
+    height: 512px;
+    padding: 44px;
+  }
+  & .chart__title{
+    color: var(--Dark-brown);
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    @media (min-width: 600px){
+      font-size: 2em;
+      text-align: center;
+    }
+  }
+  & .chart__bars-container{    
+    display: flex;
+    justify-content: space-around;
+    height: 220px;
+    align-items: end;
+    margin-bottom: 30px;
+    @media (min-width: 600px){
+      margin-bottom: 50px;
+    }
+  }
+  & .chart__bar{
+    background-color: var(--Soft-red);
+    width: 32px;
+    height: 200px;
+    border-radius: 4px;
+    position: relative;
+    @media (min-width: 600px){
+      width: 50px;
+    }
+    & .chart__bar--label{
+      background-color: var(--Dark-brown);
+      width: 38px;
+      font-size: 0.5em;
+      color: var(--Very-pale-orange);
+      padding: 4px;
+      border-radius: 4px;
+      font-weight: 700;
+      position: absolute;
+      top: -24px;
+      left: -4px;      
+      display: none;
+      @media (min-width: 600px){
+        width: 54px;
+        font-size: 0.7em;
+        top: -32px;
+        left: 2px;
+      }
+    }
+    & .chart__bar--day{
+      position: absolute;
+      bottom: -16px;
+      font-size: 0.6em;
+      width: 32px;
+      text-align: center;
+      @media (min-width: 600px){
+        width: 54px;
+        bottom: -24px;
+        font-size: 0.8em;
+      }
+    }
+    &:hover{
+      cursor: pointer;
+      filter: brightness(1.2);
+    }
+  }
+  & .chart__analitics{
+    /* border: 1px dotted red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    font-size: 0.7em;
+    border-top: 1px solid var(--Cream);
+    @media (min-width: 600px){
+      padding-top: 32px;
+      font-size: 0.9em;
+    }
+  }
+  & .chart__total{
+    margin-bottom: 8px;
+    
+  }
+  & .chart__total-value{
+    color: var(--Dark-brown);
+    font-weight: 700;
+    font-size: 1.4em;
+    @media (min-width: 600px){
+      font-size: 2.4em;
+    }
+  }
+  & .chart__percentage{
+    color: var(--Dark-brown);
+    font-weight: 700;
+    text-align: right;
+    margin-top: 18px;
+    @media (min-width: 600px){
+      margin-top: 30px;
+    }
+  }
+}
+
+
+
+
+
+
+/* @media (min-width: 600px) {
+  .main-container{
+    width: 540px;
+  }
+} */
+
+.attribution {
+  font-size: 0.61em;
+  text-align: center;
+  & a{
+    text-decoration: none;
+    color: hsl(228, 45%, 44%);
+  }
+}
