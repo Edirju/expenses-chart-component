@@ -1,4 +1,4 @@
-# Frontend Mentor - Expenses chart component
+# Frontend Mentor - Expenses chart component | Reto de programación
 
 ![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)
 
